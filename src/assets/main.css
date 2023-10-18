@@ -1,0 +1,50 @@
+:root {
+  --primary-color: #13e9a5;
+  --secondary-color: #05d0a4;
+  --letter-color-dark: #1b1b1b;
+  --letter-color-light: white;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: var(--letter-color-dark);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+p {
+  margin: 0;
+  color: var(--letter-color-dark);
+}
+
+i {
+  color: var(--letter-color-dark);
+}
+
+button {
+  border: 0;
+  font-family: Arial, sans-serif;
+  background: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
