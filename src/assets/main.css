@@ -3,6 +3,7 @@
   --secondary-color: #5b60ff;
   --letter-color-dark: #1b1b1b;
   --letter-color-light: white;
+  --error-color: #B0002E;
 }
 
 html {

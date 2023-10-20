@@ -18,6 +18,7 @@
                         <img src="/triangle.png" alt="triangle">
                     </button>
                 </div>
+                <p v-if="wrongAnswer" class="error-message">Foute antwoord</p>
                 <v-card-actions>
                     <v-spacer></v-spacer>
                     <v-btn text="Sluiten" @click="isActive.value = false"></v-btn>
@@ -25,17 +26,25 @@
             </v-card>
         </template>
     </v-dialog>
+    
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router';
 import { useStore } from '@/stores/store.js'
+
+const router = useRouter();
 const store = useStore();
+
+const wrongAnswer = ref(false);
 
 function checkAnswer(selectedButton) {
     if (selectedButton == 'triangle') {
-        console.log('Good button');
+        wrongAnswer.value = false;
+        router.push('/dashboard');
     } else {
-        console.log('Bad button');
+        wrongAnswer.value = true;
     }
 }
 </script>
@@ -46,6 +55,12 @@ function checkAnswer(selectedButton) {
     justify-content: center;
     gap: 30px;
     padding: 50px;
+}
+
+.error-message {
+    display: flex;
+    justify-content: center;
+    color: var(--error-color);
 }
 
 @media only screen 

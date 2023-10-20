@@ -15,8 +15,9 @@
 
 <script setup>
 import { ref } from 'vue'
-import Captcha from '../components/Captcha.vue';
 import { useStore } from '@/stores/store.js'
+import Captcha from '../components/Captcha.vue'
+
 const store = useStore();
 
 const passwordInput = ref('')
@@ -63,7 +64,6 @@ function checkPassword() {
     width: 100%;
     max-width: 400px;
 }
-
 </style>
 
 
