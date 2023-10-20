@@ -1,6 +1,5 @@
 <template>
-  <h1> APP TEST</h1>
-  <RouterView />
+    <RouterView />
 </template>
 
 <script setup>

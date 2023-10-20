@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #13e9a5;
-  --secondary-color: #05d0a4;
+  --primary-color: #00C3FF;
+  --secondary-color: #5b60ff;
   --letter-color-dark: #1b1b1b;
   --letter-color-light: white;
 }
@@ -15,7 +15,8 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: roboto, Arial, sans-serif;
+  letter-spacing: 1px;
 }
 
 ul {
@@ -37,14 +38,25 @@ p {
   color: var(--letter-color-dark);
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: var(--letter-color-dark);
+}
+
 i {
   color: var(--letter-color-dark);
 }
 
 button {
   border: 0;
-  font-family: Arial, sans-serif;
+  font-family: roboto, Arial, sans-serif;
+  letter-spacing: 1px;
   background: none;
   white-space: nowrap;
   cursor: pointer;
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url('./fonts/Roboto-Regular.ttf') format('truetype');
 }
