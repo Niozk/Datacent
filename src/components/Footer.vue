@@ -1,14 +1,12 @@
 <template>
     <footer>
         <div class="footer-content">
-            <p>Niozken © 2023</p>
-            <a href="https://github.com/Niozk/datacent" class="fa-brands fa-github"></a>
+            <p>Sardar © 2023</p>
         </div>
     </footer>
 </template>
 
 <script setup>
-
 </script>
 
 <style scoped>
@@ -26,9 +24,8 @@ footer {
 
 .footer-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 80px;
+    justify-content: center;
+    height: 50px;
     gap: 10px;
     padding: 10px;
     border: solid 1px var(--letter-color-dark);

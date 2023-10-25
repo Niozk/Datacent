@@ -1,6 +1,6 @@
 <template>
     <section class="intro">
-        <h1>Welkom bij Datacent</h1>
+        <h1>Welkom bij <span>Datacent</span></h1>
         <h2>Begin door het geheime wachtwoord in te vullen</h2>
     </section>
     <section class="login">
@@ -46,6 +46,10 @@ function checkPassword() {
 .intro h1 {
     text-align: center;
     font-size: 3rem;
+}
+
+.intro h1 span {
+    color: var(--primary-color);
 }
 
 .intro h2 {
