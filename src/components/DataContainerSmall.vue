@@ -6,7 +6,8 @@
                 <slot name="content" />
             </p>
             <p class="percentage" :class="colorClass">
-                <slot name="percentage" />
+                <i :class="[iconClass, colorClass]"></i>
+                <slot name="percentage">{{ percentage }}</slot>
             </p>
             <p class="time">
                 <slot name="time" />
@@ -18,17 +19,22 @@
 <script setup>
 import { ref, computed } from 'vue'
 
-const testnumber = ref(-5); //TEEEEEESTT
+const percentage = ref(props.percentage);
 
 const props = defineProps({
-    title: String
+    title: String,
+    percentage: Number
 });
 
 const colorClass = computed(() => {
     return {
-        negative: testnumber.value < 0,
-        positive: testnumber.value >= 0,
+        negative: percentage.value < 0,
+        positive: percentage.value >= 0,
     };
+});
+
+const iconClass = computed(() => {
+    return percentage.value >= 0 ? 'fa-solid fa-arrow-up' : 'fa-solid fa-arrow-down';
 });
 </script>
 
@@ -65,6 +71,10 @@ const colorClass = computed(() => {
     font-size: 1.4rem;
 }
 
+.percentage i {
+    font-size: 1.3rem;
+}
+
 .time {
     font-size: 1rem;
     color: var(--letter-color-grey);
@@ -76,6 +86,38 @@ const colorClass = computed(() => {
 
 .positive {
   color: green;
+}
+
+@media only screen 
+and (max-width: 1500px) {
+    .container {
+        width: 400px;
+        height: 350px;
+    }
+}
+
+@media only screen 
+and (max-width: 560px) {
+    .container {
+        width: 275px;
+        height: 275px;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .content {
+        font-size: 2rem;
+    }
+
+    .percentage {
+        font-size: 1.3rem;
+    }
+
+    .time {
+        font-size: 0.9rem;
+    }
 }
 </style>
 

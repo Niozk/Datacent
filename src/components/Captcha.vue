@@ -42,6 +42,7 @@ const wrongAnswer = ref(false);
 function checkAnswer(selectedButton) {
     if (selectedButton == 'triangle') {
         wrongAnswer.value = false;
+        localStorage.setItem('authenticated', 'true');
         router.push('/dashboard');
     } else {
         wrongAnswer.value = true;

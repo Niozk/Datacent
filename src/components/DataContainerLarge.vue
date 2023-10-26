@@ -37,6 +37,31 @@ const props = defineProps({
     font-size: 2.4rem;
 }
 
+@media only screen 
+and (max-width: 1500px) {
+    .container {
+        width: 400px;
+        height: 350px;
+    }
+
+}
+
+@media only screen 
+and (max-width: 560px) {
+    .container {
+        width: 320px;
+        height: 300px;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .content {
+        font-size: 2rem;
+    }
+}
+
 </style>
 
 
