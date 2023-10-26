@@ -51,7 +51,6 @@ onMounted(() => {
         console.log('not authenticated')
         router.push('/');
     }
-    
 })
 
 const router = useRouter();

@@ -14,9 +14,20 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router';
 import { useStore } from '@/stores/store.js'
 import Captcha from '../components/Captcha.vue'
+
+onMounted(() => {
+    const router = useRouter();
+    const isAuthenticated = localStorage.getItem('authenticated') === 'true';
+    
+    if (isAuthenticated) {
+        console.log('authenticated')
+        router.push('/dashboard');
+    }
+})
 
 const store = useStore();
 

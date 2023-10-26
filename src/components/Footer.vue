@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div class="footer-content">
-            <p>Sardar © 2023</p>
+            <p>Niozken © 2023</p>
         </div>
     </footer>
 </template>
